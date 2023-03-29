@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="firstLayout, duan">
-    <meta name="description" content="">
+    <meta name="keywords" content="Retrofit的一些基本使用, duan">
+    <meta name="description" content="自己使用的一些基本Retrofit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>firstLayout | Enjoy</title>
+    <title>Retrofit的一些基本使用 | Enjoy</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -337,12 +337,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">firstLayout</h1>
+                    <h1 class="description center-align post-title">Retrofit的一些基本使用</h1>
                 </div>
             </div>
         </div>
@@ -364,12 +364,37 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/Github/">
+                                <span class="chip bg-color">Github</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                                <span class="chip bg-color">博客</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Retrofit/" class="post-category">
+                                Retrofit
+                            </a>
+                        
+                            <a href="/categories/Retrofit/Android-studio/" class="post-category">
+                                Android studio
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -378,7 +403,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-03-28
+                    2023-03-29
                 </div>
                 
 
@@ -402,7 +427,97 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="Retrofit的一些基本使用"><a href="#Retrofit的一些基本使用" class="headerlink" title="Retrofit的一些基本使用"></a>Retrofit的一些基本使用</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1添加Retrofit库的依赖"><a href="#1添加Retrofit库的依赖" class="headerlink" title="1添加Retrofit库的依赖"></a>1添加Retrofit库的依赖</h3><h4 id="1-1在Gradle里面加入Retrofit库的依赖"><a href="#1-1在Gradle里面加入Retrofit库的依赖" class="headerlink" title="1.1在Gradle里面加入Retrofit库的依赖"></a>1.1在Gradle里面加入Retrofit库的依赖</h4><p><em>build.gradle</em></p>
+<pre class="line-numbers language-graphql" data-language="graphql"><code class="language-graphql"><span class="token object">dependencies</span> <span class="token punctuation">{</span>
+    <span class="token property">implementation</span> '<span class="token property">com</span>.<span class="token property">squareup</span>.<span class="token attr-name">retrofit2</span><span class="token punctuation">:</span><span class="token attr-name">retrofit</span><span class="token punctuation">:</span><span class="token number">2.4</span>.<span class="token number">0</span>' 
+    <span class="token property">implementation</span> '<span class="token property">com</span>.<span class="token property">squareup</span>.<span class="token attr-name">retrofit2</span><span class="token punctuation">:</span><span class="token property">converter</span>-<span class="token attr-name">gson</span><span class="token punctuation">:</span><span class="token number">2.0</span>.<span class="token number">2</span>' //以<span class="token property">json</span>格式得到网络返回的数据类型，当然还有其他的数据类型，这里博主目前没有接触。
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>&nbsp;1.1‘你也可以选择在</p>
+<p><img src="C:\Users\祎\Desktop\屏幕截图%202023-03-29%20161057.png" alt="屏幕截图 2023-03-29 161057"></p>
+<p>搜索最新的retrofit2库，注：implementation 在其他网站上面搜索的是compile，但是compile在3.0以上的Grade已经弃用当然也可以使用详细<a href="%5Bgradle%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%8F%8Adependencies%E4%B8%AD%E5%90%84%E7%A7%8D%E4%BE%9D%E8%B5%96%E6%96%B9%E5%BC%8F%E8%AF%B4%E6%98%8E_%E9%87%91%E7%A6%8F%E6%9E%97%E7%9A%84%E5%8D%9A%E5%AE%A2-CSDN%E5%8D%9A%E5%AE%A2%5D(https://jinfulin.blog.csdn.net/article/details/80421927?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-80421927-blog-89612508.235%5Ev27%5Epc_relevant_recovery_v2&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-80421927-blog-89612508.235%5Ev27%5Epc_relevant_recovery_v2&amp;utm_relevant_index=2)">请见</a></p>
+<h4 id="1-2添加网络权限"><a href="#1-2添加网络权限" class="headerlink" title="1.2添加网络权限"></a>1.2添加网络权限</h4><p><em><em>AndroidManifest.xml</em></em></p>
+<p>添加</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.permission.INTERNET<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="2-创建接收服务器返回数据的类（这里我先放在这里等下整理之后再写为了提醒自己更新）"><a href="#2-创建接收服务器返回数据的类（这里我先放在这里等下整理之后再写为了提醒自己更新）" class="headerlink" title="2 创建接收服务器返回数据的类（这里我先放在这里等下整理之后再写为了提醒自己更新）"></a>2 创建接收服务器返回数据的类（这里我先放在这里等下整理之后再写为了提醒自己更新）</h3><p>注:这一步很关键，有很多需要注意的内容，一不小心就有可能导致得不到返回数据（空指针错误）</p>
+<p><em><em>Reception.java</em></em></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Reception</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token comment">// 根据返回数据的格式和数据解析方式（Json、XML等）定义</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3创建自己想要传递到网络的类（GET请求一般没有）"><a href="#3创建自己想要传递到网络的类（GET请求一般没有）" class="headerlink" title="3创建自己想要传递到网络的类（GET请求一般没有）"></a>3创建自己想要传递到网络的类（GET请求一般没有）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Request</span><span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token comment">// 根据返回数据的格式和数据解析方式（Json、XML等）定义</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4创建-用于描述网络请求的接口"><a href="#4创建-用于描述网络请求的接口" class="headerlink" title="4创建 用于描述网络请求的接口"></a>4创建 用于描述网络请求的接口</h3><p><em><em>GetRequest_Interface.interface</em></em></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">GetRequest_Interface</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@GET</span><span class="token punctuation">(</span><span class="token string">"openapi.do?keyfrom=Yanzhikai&amp;key=2032414398&amp;type=data&amp;doctype=json&amp;version=1.1&amp;q=car"</span><span class="token punctuation">)</span>
+    <span class="token class-name">Call</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Translation</span><span class="token punctuation">&gt;</span></span>  <span class="token function">getCall</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//这里的Translation是个栗子</span>
+<span class="token comment">//Call&lt;Reception&gt;</span>
+  <span class="token comment">//@GET表示使用get的请求方式，括号内容是你需要请求网络的完整url的一部分下面会介绍</span>
+  <span class="token comment">//Call可以理解为你给网络打工电话,&lt;&gt;里面是返回数据的类</span>
+  <span class="token comment">// getCall();是你调用的方法，里面有时候会有参数。根据不同的接口要求不同</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里博主就简单介绍几种经常使用的网络请求方法</p>
+<p>@GET（””）Call&lt;类&gt;  方法();  获得服务器上的数据</p>
+<p>@PUST（””）Call&lt;类&gt; 方法(类 s);  将类 s的内容发送到服务器 //第一次</p>
+<p>@PUT （””）Call&lt;类&gt; 方法（类 w）; 将s更新为w的内容</p>
+<p>@HTTP 可以代替GET，POST，PUT，DELETE</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">GetRequest_Interface</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * method：网络请求的方法（区分大小写）
+     * path：网络请求地址路径 //和上面（）里面内容一样
+     * hasBody：是否有请求体   就是有向网络发送的东西
+     */</span>
+    <span class="token annotation punctuation">@HTTP</span><span class="token punctuation">(</span>method <span class="token operator">=</span> <span class="token string">"GET"</span><span class="token punctuation">,</span> path <span class="token operator">=</span> <span class="token string">"blog/{id}"</span><span class="token punctuation">,</span> hasBody <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token class-name">Call</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ResponseBody</span><span class="token punctuation">&gt;</span></span> <span class="token function">getCall</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Path</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// {id} 表示是一个变量  通过@Path可以做到动态请求不同的网络</span>
+    <span class="token comment">// method 的值 retrofit 不会做处理，所以要自行保证准确</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当然还需要注意一点的是 方法参数需要注释名称（当然还有上传文件的会稍后介绍）</p>
+<p>@Path，在上面有介绍</p>
+<p>@Body  官方网站的解释是非表单请求，博主的目前能力所使用的是自己创建的类</p>
+<p>@Hearder 表示请求头</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+   * 是否同意添加好友
+   */</span>
+  <span class="token annotation punctuation">@POST</span><span class="token punctuation">(</span><span class="token string">"/api/v1/friend/pass"</span><span class="token punctuation">)</span>
+  <span class="token class-name">Call</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">AddFriends_return</span><span class="token punctuation">&gt;</span></span> <span class="token function">agreeTobeFriend</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Body</span> <span class="token class-name">AddnewFriendSend</span> send<span class="token punctuation">,</span> <span class="token annotation punctuation">@Header</span><span class="token punctuation">(</span><span class="token string">"Authorization"</span><span class="token punctuation">)</span><span class="token class-name">String</span> token<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5创建Retrofit实例"><a href="#5创建Retrofit实例" class="headerlink" title="5创建Retrofit实例"></a>5创建Retrofit实例</h3><p>完成以上步骤，基本上我们可以有了网络请求的基本工具辣。接下来，我们将使用这些工具来首先给网络数据和得到网络数据</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Retrofit<span class="token punctuation">.</span>Builder</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Retrofit<span class="token punctuation">.</span>Builder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">baseUrl</span><span class="token punctuation">(</span><span class="token string">"http://116.204.121.9:61583/"</span><span class="token punctuation">)</span> <span class="token comment">//顾名思义根本的URl</span>
+                <span class="token punctuation">.</span><span class="token function">addConverterFactory</span><span class="token punctuation">(</span><span class="token class-name">GsonConverterFactory</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//传递为json数据</span>
+        <span class="token class-name">Retrofit</span> retrofit <span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//记住</span>
+        <span class="token class-name">FriendListInterface</span> friendListInterface <span class="token operator">=</span> retrofit<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token class-name">FriendListInterface</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//FriendListInterface是接口类</span>
+        <span class="token class-name">Call</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FriendsList_return</span><span class="token punctuation">&gt;</span></span> call <span class="token operator">=</span> friendListInterface<span class="token punctuation">.</span><span class="token function">getFriendList</span><span class="token punctuation">(</span><span class="token class-name">User_Now</span><span class="token punctuation">.</span><span class="token function">getUserNow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">//Call&lt;里面的内容要和接口方法写的一致&gt; </span>
+ <span class="token comment">//这里我可以  Call&lt;other_return&gt; call2 = friendListInterface.其他方法（参数）; 但是前提是FriendlistInterface里面有这个接口</span>
+        call<span class="token punctuation">.</span><span class="token function">enqueue</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Callback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FriendsList_return</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onResponse</span><span class="token punctuation">(</span><span class="token class-name">Call</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FriendsList_return</span><span class="token punctuation">&gt;</span></span> call<span class="token punctuation">,</span> <span class="token class-name">Response</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FriendsList_return</span><span class="token punctuation">&gt;</span></span> response<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token comment">//网络请求成功辣，response.body();就是得到的网络数据</span>
+            <span class="token punctuation">}</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFailure</span><span class="token punctuation">(</span><span class="token class-name">Call</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FriendsList_return</span><span class="token punctuation">&gt;</span></span> call<span class="token punctuation">,</span> <span class="token class-name">Throwable</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                 <span class="token comment">//网络请求失败辣</span>
+            <span class="token punctuation">}</span>
+
+        
+
+         <span class="token comment">//输入call.equeue(new )会自动补全异步操作</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>对baseurl和上面@GET（””）等方法里面的内容解释。</p>
+<p>假如一个完整的URl（俗称网络链接）为：<a target="_blank" rel="noopener" href="http://116.204.121.9:61583/api/v1/drifting_drawing/draw">http://116.204.121.9:61583/api/v1/drifting_drawing/draw</a></p>
+<p>那么baseUrl为<a target="_blank" rel="noopener" href="http://116.204.121.9:61583/">http://116.204.121.9:61583/</a>        @GET(“api/v1/drifting_drawing/draw”)两者结合起来组成一个完整的URL 这样的好处就是你可以对多个相同baseURl的项目，创建一个retrofit实例，重复使用retrofit实例或者接口</p>
+<p>call有同步和异步两种操作，这里只介绍异步</p>
+
                 
             </div>
             <hr/>
@@ -428,7 +543,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://dwqing.github.io/2023/03/28/17/05/firstlayout/">http://dwqing.github.io/2023/03/28/17/05/firstlayout/</a>
+                    <a href="http://dwqing.github.io/2023/03/29/15/55/retrofit-de-yi-xie-ji-ben-shi-yong/">http://dwqing.github.io/2023/03/29/15/55/retrofit-de-yi-xie-ji-ben-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -465,7 +580,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/Github/">
+                                    <span class="chip bg-color">Github</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                                    <span class="chip bg-color">博客</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -542,43 +669,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/03/29/14/13/c-yu-yan-bi-ji/">
+                <a href="/2023/03/29/15/55/retrofit-de-yi-xie-ji-ben-shi-yong/">
                     <div class="card-image">
                         
+                        <img src="/medias/banner/7.jpg" class="responsive-img" alt="Retrofit的一些基本使用">
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="c语言笔记">
-                        
-                        <span class="card-title">c语言笔记</span>
+                        <span class="card-title">Retrofit的一些基本使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            自己使用的一些基本Retrofit
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/c%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    c语言
+                            <a href="/categories/Retrofit/" class="post-category">
+                                    Retrofit
+                                </a>
+                            
+                            <a href="/categories/Retrofit/Android-studio/" class="post-category">
+                                    Android studio
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
                     
                     <a href="/tags/Github/">
                         <span class="chip bg-color">Github</span>
@@ -599,30 +735,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/03/28/16/55/hexo-github-bo-ke-da-jian-ji-lu/">
+                <a href="/2023/03/29/14/13/c-yu-yan-bi-ji/">
                     <div class="card-image">
                         
-                        <img src="/medias/banner/7.jpg" class="responsive-img" alt="Hexo+Github博客搭建记录">
                         
-                        <span class="card-title">Hexo+Github博客搭建记录</span>
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="c语言笔记">
+                        
+                        <span class="card-title">c语言笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="post-category">
-                                    软件安装与配置
+                            <a href="/categories/c%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    c语言
                                 </a>
                             
                             
@@ -631,10 +768,6 @@
                 </div>
                 
                 <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
                     
                     <a href="/tags/Github/">
                         <span class="chip bg-color">Github</span>
