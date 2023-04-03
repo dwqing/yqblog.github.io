@@ -6,7 +6,7 @@
   <link href="http://dwqing.github.io/atom.xml" rel="self"/>
   
   <link href="http://dwqing.github.io/"/>
-  <updated>2023-03-29T09:39:32.730Z</updated>
+  <updated>2023-04-03T16:33:20.767Z</updated>
   <id>http://dwqing.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>glide的简单使用</title>
+    <link href="http://dwqing.github.io/2023/04/03/23/19/glide-de-jian-dan-shi-yong/"/>
+    <id>http://dwqing.github.io/2023/04/03/23/19/glide-de-jian-dan-shi-yong/</id>
+    <published>2023-04-03T15:19:30.000Z</published>
+    <updated>2023-04-03T16:33:20.767Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Glide的简单使用&quot;&gt;&lt;a href=&quot;#Glide的简单使用&quot; class=&quot;headerlink&quot; title=&quot;Glide的简单使用&quot;&gt;&lt;/a&gt;Glide的简单使用&lt;/h1&gt;&lt;h2 id=&quot;1添加依赖&quot;&gt;&lt;a href=&quot;#1添加依赖&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="博客" scheme="http://dwqing.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="glide" scheme="http://dwqing.github.io/tags/glide/"/>
+    
+    <category term="Android" scheme="http://dwqing.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Retrofit的一些基本使用</title>
