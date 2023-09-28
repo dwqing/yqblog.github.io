@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="c语言笔记, duan">
     <meta name="description" content="C语言前言博主先讲述了一些枯燥无聊但是有用的c语言基础知识，建议读者选择先行跳过第一章内容。待读者将C语言的基础用法读懂了理解之后，再回头来看，会有不一样的收获。是自己学习c语言的历程，难免会有不正确的地方，欢迎读者提出修改意见
-1C语言基">
+zhaji">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -443,6 +443,13 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="C语言"><a href="#C语言" class="headerlink" title="C语言"></a>C语言</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>博主先讲述了一些枯燥无聊但是有用的c语言基础知识，建议读者选择先行跳过第一章内容。待读者将C语言的基础用法读懂了理解之后，再回头来看，会有不一样的收获。是自己学习c语言的历程，难免会有不正确的地方，欢迎读者提出修改意见</p>
+<h2 id="zhaji"><a href="#zhaji" class="headerlink" title="zhaji"></a>zhaji</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//a表示数组的第一个元素的地址。</span>
+<span class="token keyword">int</span> a<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+a<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">*</span><span class="token punctuation">(</span>a<span class="token operator">+</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>a<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span>  a<span class="token operator">+</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token operator">*</span>n；
+a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>  <span class="token operator">=</span> <span class="token operator">*</span>a；
+<span class="token operator">&amp;</span><span class="token punctuation">(</span><span class="token operator">*</span>a<span class="token punctuation">)</span> <span class="token operator">=</span> a；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="1C语言基础知识（目前只是）"><a href="#1C语言基础知识（目前只是）" class="headerlink" title="1C语言基础知识（目前只是）"></a>1C语言基础知识（目前只是）</h2><h3 id="1-1什么是计算机程序"><a href="#1-1什么是计算机程序" class="headerlink" title="1.1什么是计算机程序"></a>1.1什么是计算机程序</h3><p>所谓的程序，就是一组计算机可以识别和执行的指令</p>
 <h3 id="1-2什么是计算机语言"><a href="#1-2什么是计算机语言" class="headerlink" title="1.2什么是计算机语言"></a>1.2什么是计算机语言</h3><h4 id="1-2-1机械语言"><a href="#1-2-1机械语言" class="headerlink" title="1.2.1机械语言"></a>1.2.1机械语言</h4><p>因为计算机的硬件本质是电路，电路只有开和关这两种情况，所以就用0和1分别代表关闭和开启来控制电脑电路的闭合，达到想要的目的。</p>
 <p>0和1指令，计算机发展的初期计算机的指令长度为16。栗子:1011011000000000（二进制代码/机器指令）</p>
@@ -520,7 +527,13 @@
     <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment">//%d代表是整数 ， &amp;的取地址符号 %f代表浮点型 %s是字符型</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"你好呀！老狗"</span><span class="token punctuation">)</span>        <span class="token comment">//printf可以直接输出字符串，也可以在字符串中加变量值</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"你%d岁"</span><span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+    <span class="token keyword">double</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> b<span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%f%f"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>a<span class="token punctuation">,</span><span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">char</span> c<span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> a<span class="token punctuation">,</span>b<span class="token punctuation">;</span>
 <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%dwww%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>a<span class="token punctuation">,</span><span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//注意这是错误的示范也是scanf函数经常出现的错误，scanf里面尽量不要出现别的字符</span>
@@ -585,7 +598,36 @@
                                <span class="token comment">//a = 2 输出老狗2老狗3老狗4老狗5</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h3 id="3循环"><a href="#3循环" class="headerlink" title="3循环"></a>3循环</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//do while</span>
+<span class="token comment">//先做后判断</span>
+<span class="token keyword">do</span><span class="token punctuation">{</span>
+    <span class="token comment">//do something</span>
+    <span class="token comment">//跌倒</span>
+<span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
+<span class="token comment">//while</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//do someting</span>
+   <span class="token comment">//迭代</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">//初始化和跌打可以有多个，判断条件也可以有多个</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span>初始化<span class="token punctuation">;</span>判断条件<span class="token punctuation">;</span>迭代<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//do someting</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//1e-6   10的-6次方</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">100</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//c89不能在里面定义，要在外边</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="4数组"><a href="#4数组" class="headerlink" title="4数组"></a>4数组</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//数组名+字节*偏移量</span>
+<span class="token punctuation">(</span>a<span class="token operator">+</span><span class="token number">4</span><span class="token operator">*</span>i<span class="token punctuation">)</span><span class="token comment">//计算过程 ,a代表数组开始的第一个占的字节 ，4不过是int 的字节数，有时候用sizeOf</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>（笔记如果全局变量和局部变量冲突以局部变量为准）</p>
+<p>（数组的名称作为变量传递给函数，传递的是地址）</p>
 
                 
             </div>

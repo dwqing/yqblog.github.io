@@ -6,7 +6,7 @@
   <link href="http://dwqing.github.io/atom.xml" rel="self"/>
   
   <link href="http://dwqing.github.io/"/>
-  <updated>2023-04-03T16:33:20.767Z</updated>
+  <updated>2023-09-28T09:17:22.394Z</updated>
   <id>http://dwqing.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git 简单使用</title>
+    <link href="http://dwqing.github.io/2023/09/28/17/13/git-jian-dan-shi-yong/"/>
+    <id>http://dwqing.github.io/2023/09/28/17/13/git-jian-dan-shi-yong/</id>
+    <published>2023-09-28T09:13:36.000Z</published>
+    <updated>2023-09-28T09:17:22.394Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;配置Git&lt;/strong&gt;：在使用Git之前，你需要配置你的用户名和电子邮件地址，以便Git能够识别你的身份。&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="git" scheme="http://dwqing.github.io/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>glide的简单使用</title>
@@ -79,7 +104,7 @@
     <link href="http://dwqing.github.io/2023/03/29/14/13/c-yu-yan-bi-ji/"/>
     <id>http://dwqing.github.io/2023/03/29/14/13/c-yu-yan-bi-ji/</id>
     <published>2023-03-29T06:13:31.000Z</published>
-    <updated>2023-03-31T03:50:10.745Z</updated>
+    <updated>2023-05-12T02:48:07.063Z</updated>
     
     
       
